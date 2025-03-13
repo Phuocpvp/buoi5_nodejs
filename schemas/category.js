@@ -10,4 +10,10 @@ const categorySchema = new mongoose.Schema({
         type: String,
         default: "",
     },
+    isDeleted: {
+        type: Boolean,
+        default: false
+    }
 });
+
+module.exports = mongoose.model('category', categorySchema);
